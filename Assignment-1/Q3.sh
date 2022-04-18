@@ -18,6 +18,7 @@ while read i; do
 {
 	echo -n "Line No: $count - Count of Words: "
 	wc -w <<< "$i"
+	((count=count+1))
 }
 done < $1
 echo ""

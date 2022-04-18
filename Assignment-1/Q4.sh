@@ -2,8 +2,10 @@
 RED='\033[0;31m' #For Coloured Headings
 NC='\033[0m'
 
-echo "Enter the Array with space separated elements"
-read -p "-> " -a array
+echo "Enter the Array with comma separated elements"
+read -p "-> " in
+in="${in//,/ }"
+read -a array <<< $in
 
 len=${#array[*]}
 

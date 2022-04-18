@@ -24,8 +24,8 @@ Q3) Executed using ./Q3.sh <filename>
     Prints the required information in sequential manner(as given)
     
 Q4) Executed using ./Q4.sh
-		Required to give array of space-separated integers in a single line
-		(Ex -> 3 1 4 2 0)
+		Required to give array of comma-separated integers in a single line
+		(Ex -> 3,1,4,2,0)
 		Prints the sorted array of integers.
 
 Q5) Executed using ./Q5.sh
