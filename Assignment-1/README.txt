@@ -1,5 +1,5 @@
 Introduction to Software Systems (ISS)'22
-Assignment - 1 -> BASH
+{{ Assignment - 1 -> BASH }}
 
 # BHAV BERI
 # 2021111013
@@ -11,24 +11,22 @@ GitHub Repository Direct Link -> https://github.com/b-beri/ISS/tree/main/Assignm
 
 ~~ Special Notes regarding Scripts ~~
 
-Q1a) Executed using ./Q1a.sh
-     Deletes empty lines in the quotes.txt file inplace
+Q1) Executed using ./q1.sh
+     a) Deletes empty lines in the quotes.txt file and prints on the terminal.
+     b) Deletes duplicate lines in the quotes.txt file and prints on the terminal.
      
-Q1b) Executed using ./Q1b.sh
-     Deletes duplicate lines in the quotes.txt file inplace
-     
-Q2) Executed using ./Q2.sh
-    Creates new file - speech.txt - with the quotes as in required format.
+Q2) Executed using ./q2.sh
+    Creates new file - speech.txt - with the quotes as in required format, from the quotes.txt file.
     
-Q3) Executed using ./Q3.sh <filename>
+Q3) Executed using ./q3.sh <filename>
     Prints the required information in sequential manner(as given)
     
-Q4) Executed using ./Q4.sh
-		Required to give array of comma-separated integers in a single line
+Q4) Executed using ./q4.sh
+		Required to give array of comma-separated integers in a single line.
 		(Ex -> 3,1,4,2,0)
 		Prints the sorted array of integers.
 
-Q5) Executed using ./Q5.sh
-		Required to give a string Input
+Q5) Executed using ./q5.sh
+		Required to give a single string Input
 		(Ex -> Helloo / Hello / ISS)
 		Prints the output as in given format sequentially.

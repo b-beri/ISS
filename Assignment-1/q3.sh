@@ -23,5 +23,5 @@ while read i; do
 done < $1
 echo ""
 echo -e "${RED}Repeated Words with count${NC}"
-grep -wo '[[:alnum:]]\+' $1 | sort | uniq -cd | awk '{print "Word: " $2 " - Count: " $1}'
+grep -wo '[[:alnum:]]\+' $1 | sort | uniq -cd | awk '{print "Word: " $2 " - Count  of repetition: " $1}'
 echo ""
