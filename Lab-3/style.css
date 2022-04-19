@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(to right, #000000 0%, #336699 100%);
+}
+
+ul.nav {
+    padding-top: 2%;
+    align-content: center;
+    color: whitesmoke;
+}
+
+ul.nav li {
+    display: inline-block;
+    margin: 0;
+    padding-left: 1vmax;
+    padding-right: 1vmax;
+    font-size: 1.6vmax;
+}
+
+ul.nav li:hover {
+    text-decoration: underline;
+    color: hotpink;
+}
+
+.a_nav {
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: plum;
+}
+
+.a_nav:hover {
+    color: hotpink;
+}
+
+hr.top {
+    border-top: 3px dashed lightsalmon;
+    border-bottom: transparent;
+}
+
+h1.heading_main {
+    font-size: 2.5vmax;
+    color: orange;
+}
+
+p {
+    padding-left: 3%;
+    color: aliceblue;
+    padding-right: 3%;
+    text-align: justify;
+    font-size: 1.1vmax;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a.link {
+    color: hotpink;
+}
+
+a.link:hover {
+    color: orchid;
+}
+
+img.rapper {
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    width: 30vmax;
+}
+
+p.quote {
+    margin-top: 3vmax;
+    color: azure;
+    font-family: 'Pacifico', cursive;
+    font-size: 2.4vmax;
+    display: block;
+    text-align: center;
+}
+
+h1.heading {
+    font-size: 2.0vmax;
+    color: orange;
+    margin-left: 1%;
+    font-family: 'Courier New', Courier, sans-serif;
+}
+
+.list {
+    margin-left: 2%;
+    align-content: center;
+    color: gainsboro;
+}
+
+.list li {
+    margin: 0;
+    font-size: 1.3vmax;
+}
+
+form {
+    margin-top: 4%;
+    margin-left: 2%;
+}
+
+input[type="text"] {
+    padding: 0.5vmax 1vmax;
+    line-height: 2%;
+}
+
+input[type="button"] {
+    padding: 0.3vmax 0.8vmax;
+}
+
+h6 {
+    color: aquamarine;
+    text-align: right;
+    font-size: large;
+}
