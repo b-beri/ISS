@@ -1,0 +1,418 @@
+body {
+    background: black;
+    outline: hidden;
+    box-sizing: border-box;
+}
+
+/* NAVIGATION BAR CSS */
+
+.topnav {
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: black;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    background-color: black;
+    opacity: 1;
+    color: azure;
+}
+
+.topnav a:hover {
+    color: hotpink;
+}
+
+.topnav a.header {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: 'Barlow', sans-serif;
+    color: gray;
+}
+
+.topnav a.header:hover {
+    color: ghostwhite;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .topnav a:not(:first-child) {
+        background-color: #2f4f4f;
+        display: none;
+    }
+
+    .topnav a:last-child {
+        background-color: black;
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+/* Name */
+
+h1 {
+    width: 100%;
+    font-size: 2.5rem;
+    color: #a9a9a9;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1.name:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    /* line-height: 48px; */
+    left: 30%;
+    top: 50%;
+    animation: name_animation 5s linear, animated-cursor 600ms steps(29, end) infinite;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes name_animation {
+    0% {
+        content: "B_";
+    }
+
+    5% {
+        content: "BB_";
+    }
+
+    29% {
+        content: "B_";
+    }
+
+    34% {
+        content: "Bh_";
+    }
+
+    37% {
+        content: "Bha_";
+    }
+
+    40% {
+        content: "Bhav_";
+    }
+
+    54% {
+        content: "Bhav B_";
+    }
+
+    57% {
+        content: "Bhav Be_";
+    }
+
+    60% {
+        content: "Bhav Ber_";
+    }
+
+    63% {
+        content: "Bhav Beri_";
+    }
+
+    77% {
+        content: "Bhav Ber_";
+    }
+
+    80% {
+        content: "Bhav Be_";
+    }
+
+    83% {
+        content: "Bhav B_";
+    }
+
+    86% {
+        content: "Bhav_";
+    }
+
+    92% {
+        content: "Bha_";
+    }
+
+    95% {
+        content: "Bh_";
+    }
+
+    98% {
+        content: "B_";
+    }
+
+    100% {
+        content: "B_";
+    }
+}
+
+@keyframes animated-cursor {
+    from {
+        border-right-color: rgba(0, 255, 0, .75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+/* Icons */
+
+.linkedin {
+    color: rgb(37, 181, 229);
+}
+
+.linkedin:hover {
+    color: lightskyblue;
+}
+
+.github {
+    color: mediumpurple;
+}
+
+.github:hover {
+    color: rgb(179, 81, 214);
+
+}
+
+/* SKILLS */
+
+.skills_set {
+    color: beige;
+}
+
+.skills_set p {
+    font-size: 1.5rem;
+}
+
+.skills_set h1 {
+    text-decoration: underline wavy gray;
+    color: lightgrey;
+}
+
+.container {
+    border-radius: 20px;
+    background-color: lightsteelblue;
+}
+
+.skills {
+    border-radius: 20px;
+    padding-right: 10px;
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: black;
+    font-weight: 500;
+}
+
+/* Table */
+
+td {
+    overflow: hidden;
+    word-wrap: normal;
+}
+
+caption {
+    color: paleturquoise;
+    font-size: 1.75rem;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.education th,
+.education td {
+    border: 1px dashed;
+    border-color: fuchsia;
+    border-radius: 10px;
+}
+
+.education td {
+    color: mintcream;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.education td:first-child {
+    color: springgreen;
+}
+
+.honors th,
+.honors td {
+    border: 1px dashed;
+    border-color: peachpuff;
+    border-radius: 10px;
+}
+
+.honors td {
+    color: snow;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.honors td:nth-child(2) {
+    color: sandybrown;
+    font-style: italic;
+    font-family: cursive, Copperplate, Papyrus, fantasy, "Lucida Handwriting", "Monaco", Georgia;
+}
+
+table a {
+    color: lightcyan;
+}
+
+#news_form {
+    width: 100%;
+}
+
+#news_form tr {
+    margin-bottom: 1rem;
+}
+
+#news_form td:first-child {
+    text-align: right;
+    padding-right: 2rem;
+}
+
+#news_form td label {
+    font-size: 1.4rem;
+    color: aquamarine;
+}
+
+#news_form #date {
+    font-size: 1.2rem;
+}
+
+#news_form #imp {
+    font-size: 1.2rem;
+}
+
+#news_form #title {
+    font-size: 1.4rem;
+    border-radius: 5px;
+}
+
+#news_form textarea {
+    font-size: 1.3rem;
+    font-style: oblique;
+    width: inherit;
+    resize: none;
+    border-radius: 5px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+button {
+    font-size: 1rem;
+}
+
+#news_table {
+    color: snow;
+    width: 100%;
+    font-size: 1.3rem;
+}
+
+#news_table thead {
+    background-color: gold;
+    color: saddlebrown;
+}
+
+#news_table tbody td:first-child {
+    text-align: right;
+    padding-right: 1.5rem;
+}
+
+#news_table th:not(:last-child),
+#news_table td:not(:last-child) {
+    border-color: white;
+    border-style: solid;
+    border-width: 0px 1px 0px 0px;
+}
+
+#news_table tbody tr:nth-child(even) {
+    background-color: lightgrey;
+    color: black;
+}
+
+#news_table tbody tr:nth-child(even):hover {
+    background-color: azure;
+    color: slateblue;
+}
+
+#news_table tbody tr:nth-child(odd):hover {
+    background-color: slategray;
+    color: snow;
+}
+
+.toggle_buttons {
+    margin: 20px auto;
+    border-radius: 8px;
+    background-color: inherit;
+    color: snow;
+    font-size: 1.4rem;
+    border: 2px solid #4CAF50;
+}
+
+.toggle_buttons:hover {
+    color: black;
+    background-color: snow;
+}
+
+h6 {
+    color: aquamarine;
+    text-align: right;
+    font-size: large;
+}
+
+footer p {
+    padding-left: 3%;
+    color: aliceblue;
+    padding-right: 3%;
+    text-align: justify;
+    font-size: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+footer p a {
+    color: yellowgreen;
+}
+
+footer p a:hover {
+    color: lightgoldenrodyellow;
+}

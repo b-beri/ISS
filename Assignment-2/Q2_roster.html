@@ -1,0 +1,155 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable - BB</title>
+    <style>
+        table {
+            width: 100%;
+        }
+
+        table,
+        th,
+        td {
+            border-color: #000000;
+            border-style: solid;
+            border-width: 0px 1px 0px 0px;
+        }
+
+        caption {
+            font-weight: bold;
+            font-size: 1.4em;
+        }
+
+        tr:hover {
+            background: hotpink;
+        }
+
+        td#SUNDAY:hover {
+            background: red;
+        }
+
+        tr#BREAK:hover {
+            background: greenyellow;
+        }
+
+        th,
+        tr:nth-child(1) {
+            background: gold;
+            font-weight: bold;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        th:nth-child(1),
+        td:nth-child(1) {
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        h6 {
+            text-align: right;
+            font-size: medium;
+        }
+
+        button,
+        #Generate {
+            font-size: 1rem;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        alert("To leave some subjects(classes as free), just click 'OK'");
+        var data = new Array();
+        var admin = "";
+        for (let index = 0; index < 18; index++) {
+            if (input === "admin") {
+                data[index] = index;
+                continue;
+            }
+            var input = prompt("Enter Subject " + (index + 1), "");
+            // var input = index;
+            if (input == null) {
+                index--;
+                continue;
+            }
+            if (input === "")
+                input = "-FREE-";
+            data[index] = input;
+        }
+        // document.write(data);
+    </script>
+
+    </table>
+    <input type="button" value="Generate the TimeTable" onclick="tableGenerator()" id="Generate">
+    <div id="TimeTable">
+    </div>
+    <button onclick="location.reload()" style="display: none;" id="rerun">ReRun</button>
+
+    <script>
+        function tableGenerator() {
+            var body = document.getElementById("TimeTable");
+
+            var tbl = document.createElement("table");
+            var tbl_caption = tbl.createCaption();
+            tbl_caption.innerHTML = "~~ Roster Time Table ~~";
+
+            var Days_Header = ["", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"];
+
+            var row = document.createElement("tr");
+            for (var j = 0; j < 8; j++) {
+                var cell = document.createElement("th");
+                var cellText = document.createTextNode(Days_Header[j]);
+                cell.appendChild(cellText);
+                row.appendChild(cell);
+            }
+            tbl.appendChild(row);
+
+            var times = ["10am - 11am", "11am - 12pm", "12pm - 1pm", "1pm - 2pm", "2pm - 3pm", "3pm - 4pm", "4pm - 5pm"];
+            var sunday = ["H", "O", "L", "I", "D", "A", "Y"];
+
+            for (var i = 0; i < 7; i++) {
+                var row = document.createElement("tr");
+
+                for (var j = 0; j < 8; j++) {
+                    var cell = document.createElement("td");
+                    if (j == 0)
+                        var cellText = document.createTextNode(times[i]);
+                    else if (j == 7) {
+                        var cellText = document.createTextNode(sunday[i]);
+                        cell.setAttribute("id", "SUNDAY");
+                    }
+                    else if (i == 3) {
+                        var cellText = document.createTextNode("BREAK");
+                        row.setAttribute("id", "BREAK");
+                    }
+                    else if (i < 3)
+                        var cellText = document.createTextNode(data[i + 6 * (j % 3)]);
+                    else
+                        var cellText = document.createTextNode(data[i - 1 + 6 * (j % 3)]);
+                    cell.appendChild(cellText);
+                    row.appendChild(cell);
+                }
+                tbl.appendChild(row);
+            }
+            document.getElementById("Generate").setAttribute("hidden", "hidden");
+            body.appendChild(tbl);
+
+            document.getElementById("rerun").style.display = "block";
+        }
+    </script>
+
+    <h6><i class="fas fa-code"></i> with <i class="fas fa-heart"></i> by Bhav Beri.</h6>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
+        integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+</body>
+
+</html>
