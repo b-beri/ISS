@@ -1,0 +1,17 @@
+BHAV BERI - 2021111013
+
+~~ Table Creation ~~
+
+create table Q1(
+   ID integer not null primary key,
+   Name varchar(20) not null,
+   Profession varchar(20) not null);
+insert into Q1 values(1,"Sam","Doctor");
+insert into Q1 values(2,"Shyam","Actor");
+insert into Q1 values(3,"Samuel","Cricketer");
+insert into Q1 values(4,"Sammy","Singer");
+
+
+~~ Getting the Result ~~
+select concat(Name,'(',upper(substring(Profession,1,1)),')') as Result from Q1;
+

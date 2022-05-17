@@ -1,0 +1,30 @@
+BHAV BERI - 2021111013
+
+~~ Table Creation ~~
+
+create table Q2(
+   N integer not null,
+   P integer);
+insert into Q2 values(1,2),(3,2),(6,8),(9,8),(2,5),(8,5),(5,NULL);
+
+
+~~ Getting the Result ~~
+(select N as Node, 'Root' as Type
+from Q2
+where P is null)
+union
+(select N as Node, 'Leaf' as Type
+from Q2
+where N not in (select distinct P
+        from Q2
+        where P is not null) 
+    and P is not null)
+union
+(select N as Node, 'Inner' as Type
+from Q2
+where N in (select distinct P
+        from Q2
+        where P is not null)
+    and P is not null)
+order by Node;
+
