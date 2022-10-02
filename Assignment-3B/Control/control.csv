@@ -1,0 +1,11 @@
+Industry,Change in Price Percent,Confidance (Tag)
+Finance - General,< 0%,Low
+Finance - General,>= 0% & <=20%,Medium
+Finance - General,>20%,High
+Auto Ancillaries,< 0%,Low
+Auto Ancillaries,>= 0% & <=10%,Medium
+Auto Ancillaries,>10%,High
+Ceramics & Granite,< 1%,Low
+Ceramics & Granite,>= 1% & <=2%,Medium
+Ceramics & Granite,>2%,High
+Finance - General || Auto Ancillaries || Ceramics & Granite,Previous day not listed,Listed New
